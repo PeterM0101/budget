@@ -1,12 +1,13 @@
 import React, { FC } from "react";
 import { Table } from "react-bootstrap";
 import { currencyFormat } from "../helpers/currencyFormat";
+import Header from "../UI/Header";
 
 const BudgetSummary: FC = () => {
   return (
     <>
-      <h5>Your Balance: </h5>
-      <h3>{currencyFormat(2555.53)}</h3>
+      <Header title="Your Balance:" type="h5" />
+      <Header title={currencyFormat(2555.53)} type="h3" />
       <Table bordered hover className="text-center">
         <thead>
           <tr>

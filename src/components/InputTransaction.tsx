@@ -1,7 +1,8 @@
 import React, { ChangeEvent, FC, SyntheticEvent, useState } from "react";
-import { Button, Form, InputGroup } from "react-bootstrap";
+import { Form, InputGroup } from "react-bootstrap";
 import { BudgetItem } from "../types/budgetItem";
 import { validation } from "../helpers/validation";
+import SaveOrCancelButtons from "../UI/SaveOrCancelButtons";
 
 interface InputTransactionProps {}
 
@@ -53,14 +54,7 @@ const InputTransaction: FC<InputTransactionProps> = () => {
             </InputGroup>
           </Form.Group>
         </Form.Group>
-        <Form.Group className="col-sm-12">
-          <Button variant="danger" type="button" className="me-5">
-            Cansel
-          </Button>
-          <Button variant="success" type="submit">
-            Ok
-          </Button>
-        </Form.Group>
+        <SaveOrCancelButtons />
       </Form>
     </div>
   );
